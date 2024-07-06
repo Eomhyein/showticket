@@ -1,3 +1,4 @@
+// 사용자 DB생성
 import {
   Column,
   Entity,
@@ -37,4 +38,7 @@ export class User {
 
   @UpdateDateColumn()
   updatedAt: Date;
+
+  // @OneToMany(() => Reservation, (reservation) => reservation.user) // 사용자와 예약 1:n 관계
+  // reservations: Reservation[];
 }
