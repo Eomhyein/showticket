@@ -79,3 +79,5 @@ Nest is [MIT licensed](LICENSE).
 ## ERD
 
 - **[ERD](https://drawsql.app/teams/-1294/diagrams/show-ticket)**
+
+## .env
