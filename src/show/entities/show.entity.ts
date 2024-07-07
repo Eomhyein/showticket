@@ -32,6 +32,9 @@ export class Show {
   @Column({ type: 'varchar', nullable: true }) //공연 이미지
   imageUrl: string;
 
+  @Column({ type: 'json', nullable: false }) //공연 날짜, 시간(배열로)
+  showDateTime: string[];
+
   @Column({ type: 'int', nullable: false }) // 공연 총시간, 뮤지컬로 예를 들면 런타임 180분
   showRuntime: number;
 

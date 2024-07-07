@@ -1,5 +1,15 @@
-import { IsNotEmpty, IsString, IsEnum, IsInt, IsUrl, IsOptional } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsString,
+  IsEnum,
+  IsInt,
+  IsUrl,
+  IsOptional,
+  IsArray,
+  ArrayNotEmpty,
+} from 'class-validator';
 import { Category } from '../types/showCategory.type';
+import { Type } from 'class-transformer';
 
 export class CreatedShowDto {
   // 공연명, 소개, 카테고리, 장소, 이미지 URL, 공연 총시간
@@ -22,6 +32,12 @@ export class CreatedShowDto {
   @IsUrl({}, { message: '유효한 URL 형식의 이미지를 입력해주세요.' })
   @IsOptional()
   imageUrl?: string;
+
+  @IsArray()
+  @ArrayNotEmpty({ message: '공연 날짜와 시간을 입력해주세요.' })
+  @Type(() => String)
+  @IsString({ each: true, message: '공연 날짜/시간은 문자열이어야 합니다.' })
+  showDateTime: string[];
 
   @IsInt({ message: '공연 총시간은 정수여야 합니다.' })
   @IsNotEmpty({ message: '공연 총시간을 입력해주세요.' })

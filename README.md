@@ -71,3 +71,13 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## API
+
+- **[API]()**
+
+## ERD
+
+- **[ERD](https://drawsql.app/teams/-1294/diagrams/show-ticket)**
+
+## .env
