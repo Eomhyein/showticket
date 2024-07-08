@@ -74,7 +74,7 @@ Nest is [MIT licensed](LICENSE).
 
 ## API
 
-- **[API]()**
+- **[API](https://humorous-krill-a4e.notion.site/28f0702f9cd24115917e85c16b4e22f4?v=02b1d7ebff3d44c5bf5808ef91b2de01&pvs=4)**
 
 ## ERD
 
