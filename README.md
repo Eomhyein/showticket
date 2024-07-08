@@ -74,10 +74,20 @@ Nest is [MIT licensed](LICENSE).
 
 ## API
 
-- **[API]()**
+- **[API](https://humorous-krill-a4e.notion.site/28f0702f9cd24115917e85c16b4e22f4?v=02b1d7ebff3d44c5bf5808ef91b2de01&pvs=4)**
 
 ## ERD
 
 - **[ERD](https://drawsql.app/teams/-1294/diagrams/show-ticket)**
 
 ## .env
+
+```.env
+DB_HOST="데이터베이스 주소"
+DB_PORT=3306
+DB_USERNAME="데이터베이스 계정"
+DB_PASSWORD="데이터베이스 암호"
+DB_NAME="데이터베이스명"
+DB_SYNC=true
+JWT_SECRET_KEY=jwt 시크릿키
+```

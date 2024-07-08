@@ -4,8 +4,10 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  OneToMany,
 } from 'typeorm';
 import { Category } from '../types/showCategory.type';
+import { ShowTime } from './showtime.entity';
 
 @Entity({
   name: 'show',
@@ -47,9 +49,9 @@ export class Show {
   @UpdateDateColumn() // 업데이트일
   updatedAt: Date;
 
-  // @OneToMany(() => ShowTime, (showTime) => showTime.show) // 공연과 예약 1:n 관계
-  // showTimes: ShowTime[];
+  @OneToMany(() => ShowTime, (showTime) => showTime.show, { cascade: true }) // 공연과 공연시간 1:n 관계
+  showTimes: ShowTime[];
 
-  // @OneToMany(() => Reservation, (reservation) => reservation.show) // 공연과 공연 시간 1대n 관계
+  // @OneToMany(() => Reservation, (reservation) => reservation.show) // 공연과 예약 1대n 관계
   // reservations: Reservation[];
 }

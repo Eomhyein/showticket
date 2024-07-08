@@ -4,7 +4,7 @@ import { ShowService } from './show.service';
 import { Roles } from 'src/auth/Roles/roles.decorator';
 import { Role } from 'src/user/types/userRole.type';
 import { CreatedShowDto } from './dto/created-show.dto';
-import { AuthGuard } from '@nestjs/passport';
+// import { AuthGuard } from '@nestjs/passport';
 import { Category } from './types/showCategory.type';
 
 @Controller('shows')
