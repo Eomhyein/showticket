@@ -10,6 +10,7 @@ import { User } from './user/entities/user.entity';
 import { UserModule } from './user/user.module';
 import { ShowModule } from './show/show.module';
 import { Show } from './show/entities/show.entity';
+import { ShowTime } from './show/entities/showtime.entity';
 
 const typeOrmModuleOptions = {
   useFactory: async (configService: ConfigService): Promise<TypeOrmModuleOptions> => ({
@@ -20,7 +21,7 @@ const typeOrmModuleOptions = {
     host: configService.get('DB_HOST'),
     port: configService.get('DB_PORT'),
     database: configService.get('DB_NAME'),
-    entities: [User, Show], // 엔티티는 반드시 여기에 명시!
+    entities: [User, Show, ShowTime], // 엔티티는 반드시 여기에 명시!
     synchronize: configService.get('DB_SYNC'),
     logging: true,
   }),
